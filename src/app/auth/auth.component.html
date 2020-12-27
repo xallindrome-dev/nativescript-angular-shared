@@ -1,0 +1,31 @@
+<form [formGroup]="form"
+      class="form"
+      (submit)="onSubmit()">
+       <div class="input-field">
+              <label for="email"
+                     class="label">E-Mail</label>
+              <input type="email"
+                     class="input"
+                     id="email"
+                     formControlName="email"
+                     #emailEl />
+       </div>
+       <div class="input-field">
+              <label for="password"
+                     class="label">Password</label>
+              <input type="password"
+                     id="password"
+                     class="input"
+                     formControlName="password"
+                     #passwordEl />
+       </div>
+       <div class="input-field text-center">
+              <button type="button"
+                      class="btn btn-flat"
+                      (click)="onSwitch()">{{ isLogin ? 'Signup instead' : 'Login instead' }}</button>
+       </div>
+       <button type="submit"
+               class="btn btn-primary"
+               *ngIf="!isLoading">{{ isLogin ? 'Login' : 'Signup' }}</button>
+       <ns-loading-indicator *ngIf="isLoading"></ns-loading-indicator>
+</form>

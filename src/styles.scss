@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import "./theme/colors";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+}
+
+.input-field {
+    margin: 16px 0;
+}
+
+.input {
+    font: inherit;
+    border: none;
+    border-bottom-style: solid;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    background: $primary;
+    color: $white;
+    padding: 4px 16px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    margin: 10px 0;
+
+    &:hover,
+    &:active {
+        background: lighten($primary, 20);
+    }
+}
+
+.btn-flat {
+    cursor: pointer;
+    font: inherit;
+    margin: 10px 0;
+
+    &hover,
+    &active {
+        color: lighten($color: $primary, $amount: 20)
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+@import 'app-common';
